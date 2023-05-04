@@ -1,0 +1,352 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Regular-webfont.woff");
+    font-weight: 400;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Semibold-webfont.woff");
+    font-weight: 600;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Bold-webfont.woff");
+    font-weight: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #2E2E2E;
+    font-family: OpenSans;
+    font-size: 16px;
+}
+.backgroundColor1{
+    background-color: #DD5555;
+}
+.backgroundColor2{
+    background-color: #FFFFFF;
+}
+.secondColor{
+    color: #FFFFFF;
+}
+.taille-1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.taille-2{
+    font-size: 36px;
+    font-weight: 600;
+}
+.taille-3{
+    font-size: 28px;
+    font-weight: 600;
+}
+.cta{
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+.cta img{
+    height: 1em;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Barre de navigation */
+.site-header {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+}
+.nav-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.logo-site {
+height: 1.5em;
+}
+.toggle {
+    display: none;
+}
+.menu {
+    display: flex;
+    /* gap: 30px; */
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+ul{
+    height:100%;
+}
+li{
+    height:100%;
+
+}
+.links {
+    font-size: 14px;
+    display: block;
+    height:100%;
+    width: 100%;
+    padding: 10px 30px;    
+}
+.links:hover{
+    background-color: #000000;
+    opacity: 0.25;
+}
+
+
+/* Section a propos */
+#about {
+    height: 100vh;
+    background: url("images/about.jpg.png") no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about .container{
+    gap: 30px;
+}
+.about-cta{
+    border-top: 1px solid #FFFFFF;
+    padding-top: 15px;
+    width: 20em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Section services */
+#services{
+    padding: 40px;
+}
+.liste-service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.titre-service{
+    text-align: center;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+    width: 400px;
+}
+.icones-services {
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Section equipe */
+.titre-team{
+    background: url("images/team.jpg.png") no-repeat;
+    background-size: cover;
+    height: 30vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.liste-equipiers{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 30px;
+}
+.equipier{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.equipier .cta{
+    width: 120px;
+    padding: 2px;
+}
+.icone-equipier{
+    height: 200px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Section contact */
+#contact .container{
+    padding: 30px;
+}
+.titre-contact{
+    text-align: center;
+}
+.form-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    width: 60%;
+    gap: 10px;
+}
+.message-contact{
+    grid-column: 1/3;
+}
+input{
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+}
+#message{
+    resize: none;
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+}
+.bouton-contact{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: end;
+}
+.envoyer{
+    border: none;
+}
+
+@media all and (max-width: 640px) {
+
+    /* Barre de navigation */
+    .toggle {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+    .logo-site {
+        position: relative;
+        z-index: 20;
+    }
+    .ouvrir {
+        display: block;
+        opacity: 0.4;
+    }
+    .fermer {
+        display: none;
+        opacity: 0.4;
+    }
+    .open .ouvrir {
+        display: none;
+    }
+    .open .fermer {
+        display: block;
+    }
+    .close .fermer{
+        display: none;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        padding: 2em;
+        justify-content: space-around;
+        transform: translateY(-100%);
+        transition: transform 1s;
+    }
+    li{
+        width: 100%;
+        padding: 10px;
+
+    }
+    .links {
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .open .menu {
+        transform: translatey(0);
+    }
+    .nav-header{
+        justify-content: space-around;
+    }
+
+    /* Section a propos */
+    .about-cta{
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    /* Section equipe */
+    .titre-team{
+        background-position: center;
+        height: 50vh;
+    }
+    .liste-equipiers{
+        display: flex;
+        flex-direction: column;
+    }
+    .icone-equipier{
+        height: 300px;
+        width: 300px;
+        padding: 10px;
+    }
+
+    /* Section contact */
+    .form-contact{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 800px) {
+
+    /* Section contact */
+    .form-contact{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 1000px) {
+
+    /* Section equipe */
+    .liste-equipiers{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
